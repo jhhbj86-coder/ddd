@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Only Us Memory Cabin</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="top">
+        <strong>Only Us</strong>
+        <span id="mode">游客模式</span>
+        <button id="logout" hidden>退出</button>
+      </nav>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Memory Cabin</p>
+          <h1>只属于你们两个人的照片宇宙</h1>
+          <div class="stats" id="stats"></div>
+        </div>
+        <form id="login" class="panel">
+          <h2>专属密码</h2>
+          <input id="password" type="password" placeholder="输入密码" />
+          <button>进入</button>
+        </form>
+      </section>
+      <p id="notice"></p>
+      <section id="studio" class="studio" hidden>
+        <form id="upload" class="panel">
+          <h2>上传照片</h2>
+          <input name="photo" type="file" accept="image/*" required />
+          <input name="title" placeholder="标题" />
+          <input name="date" type="date" />
+          <textarea name="note" placeholder="想说的话"></textarea>
+          <select name="visibility"><option value="private">私密</option><option value="public">游客可见</option></select>
+          <label class="check"><input name="reminderEnabled" type="checkbox" /> 加提醒</label>
+          <input name="remindAt" type="datetime-local" />
+          <input name="reminderText" placeholder="提醒内容" />
+          <button>保存</button>
+        </form>
+        <aside class="panel play">
+          <h2>今日小签</h2>
+          <p id="prompt"></p>
+          <button id="nextPrompt">换一条</button>
+        </aside>
+      </section>
+      <section>
+        <h2 id="listTitle">公开窗口</h2>
+        <div id="memories" class="grid"></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

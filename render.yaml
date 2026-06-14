@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: couple-memory-site
+    env: docker
+    disk:
+      name: couple-memory-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /data
+      - key: COUPLE_SITE_PASSWORD
+        value: "159951"
+      - key: SESSION_SECRET
+        sync: false
